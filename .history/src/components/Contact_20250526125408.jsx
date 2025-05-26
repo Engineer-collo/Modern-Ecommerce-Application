@@ -37,7 +37,7 @@ const Contact = ({ showSuccessToast }) => {
             </p>
           </div>
         </div>
-      
+         
         {/* Right Form Section */}
         <form onSubmit={handleSubmit} className="space-y-4 bg-white shadow-md rounded-lg p-6">
           <div>

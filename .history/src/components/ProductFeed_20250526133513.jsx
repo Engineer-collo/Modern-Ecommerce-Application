@@ -4,11 +4,10 @@ import OfferCountdown from "./OfferCountdown";
 import VideoSlider from './VideoSlider';
 
 
-const ProductFeed = () => {
+const ProductFeed = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-   //Videos url.
   const url1 = 'https://videos.pexels.com/video-files/6716616/6716616-sd_640_360_30fps.mp4'
   const url2 = 'https://videos.pexels.com/video-files/8311919/8311919-sd_506_960_25fps.mp4'
   const url3 = 'https://videos.pexels.com/video-files/8386975/8386975-sd_960_506_25fps.mp4'
@@ -22,7 +21,6 @@ const ProductFeed = () => {
       .catch((err) => console.error("Failed to fetch products:", err));
   }, []);
 
-  //Search items logic
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );

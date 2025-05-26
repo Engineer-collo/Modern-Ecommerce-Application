@@ -4,11 +4,10 @@ import OfferCountdown from "./OfferCountdown";
 import VideoSlider from './VideoSlider';
 
 
-const ProductFeed = () => {
+const ProductFeed = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-   //Videos url.
   const url1 = 'https://videos.pexels.com/video-files/6716616/6716616-sd_640_360_30fps.mp4'
   const url2 = 'https://videos.pexels.com/video-files/8311919/8311919-sd_506_960_25fps.mp4'
   const url3 = 'https://videos.pexels.com/video-files/8386975/8386975-sd_960_506_25fps.mp4'
@@ -22,7 +21,6 @@ const ProductFeed = () => {
       .catch((err) => console.error("Failed to fetch products:", err));
   }, []);
 
-  //Search items logic
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
@@ -63,10 +61,23 @@ const ProductFeed = () => {
             <ProductCard
               key={product.id}
               product={product}
+              addToCart={addToCart}
             />
           ))}
         </div>
       </div>
+      
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9fafb; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+  <video
+    src="https://videos.pexels.com/video-files/3755538/3755538-sd_506_960_25fps.mp4"
+    controls
+    autoplay
+    muted
+    loop
+    style="width: 100%; border-radius: 8px;"
+  ></video>
+</div>
+
     </>
   );
 };

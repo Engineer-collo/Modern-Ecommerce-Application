@@ -29,6 +29,7 @@ const ProductFeed = () => {
 
   return (
     <>
+    
     <VideoSlider videos={videos}/>
       <div className="mt-12 p-4 max-w-7xl mx-auto">
         {/* Modern styled offer card */}
@@ -66,6 +67,17 @@ const ProductFeed = () => {
             />
           ))}
         </div>
+        <div style="max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9fafb; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+  <video
+    src="https://videos.pexels.com/video-files/3755538/3755538-sd_506_960_25fps.mp4"
+    controls
+    autoplay
+    muted
+    loop
+    style="width: 100%; border-radius: 8px;"
+  ></video>
+</div>
+
       </div>
     </>
   );
