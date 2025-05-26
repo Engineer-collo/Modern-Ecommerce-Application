@@ -19,13 +19,6 @@ const ProductDetails = ({ addToCart }) => {
 
   return (
     <>
-    <div className="flex items-center space-x-4 p-2 md:hidden">
-  <button onClick={handleBack}>
-    <img className="text-2xl h-6 w-6" src="/image.png" alt="Back" />
-  </button>
-  <h1 className="text-xl font-bold">Details</h1>
-</div>
-
     <div className="p-4 sm:p-6 max-w-4xl mx-auto bg-white rounded-2xl shadow-lg mt-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="flex-shrink-0 flex justify-center items-center">

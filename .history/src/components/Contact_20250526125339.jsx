@@ -12,7 +12,7 @@ const Contact = ({ showSuccessToast }) => {
     showSuccessToast("Message sent Successfully.");
     setForm({ name: '', email: '', message: '' });
   };
-   
+  
   return (
     <div className="max-w-5xl mx-auto p-4 mt-10">
       <h2 className="text-3xl font-bold text-center mb-6 text-gray-800">Get in Touch</h2>
@@ -37,7 +37,7 @@ const Contact = ({ showSuccessToast }) => {
             </p>
           </div>
         </div>
-      
+
         {/* Right Form Section */}
         <form onSubmit={handleSubmit} className="space-y-4 bg-white shadow-md rounded-lg p-6">
           <div>

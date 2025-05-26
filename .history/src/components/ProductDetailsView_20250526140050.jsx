@@ -1,12 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 
 const ProductDetails = ({ addToCart }) => {
-  const homeNavigate = useNavigate()
-  const handleBack = () => homeNavigate(-1)
-
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   useEffect(() => {
@@ -19,13 +15,9 @@ const ProductDetails = ({ addToCart }) => {
 
   return (
     <>
-    <div className="flex items-center space-x-4 p-2 md:hidden">
-  <button onClick={handleBack}>
-    <img className="text-2xl h-6 w-6" src="/image.png" alt="Back" />
-  </button>
-  <h1 className="text-xl font-bold">Details</h1>
-</div>
-
+    <div> 
+      <button ><img src="/back." alt="" /></button>
+    </div>
     <div className="p-4 sm:p-6 max-w-4xl mx-auto bg-white rounded-2xl shadow-lg mt-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="flex-shrink-0 flex justify-center items-center">
