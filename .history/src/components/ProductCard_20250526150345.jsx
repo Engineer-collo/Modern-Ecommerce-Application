@@ -11,7 +11,7 @@ const ProductCard = ({ product }) => {
   return (
     <div
       onClick={productDetailsView}
-      className="cursor-pointer bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-4 flex flex-col items-center text-center w-full max-w-xs mx-auto sm:max-w-sm md:max-w-md"
+      className=" bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 p-4 flex flex-col items-center text-center w-full max-w-xs mx-auto sm:max-w-sm md:max-w-md"
     >
       <img
         src={product.image}

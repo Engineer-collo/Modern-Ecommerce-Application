@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const Cart = ({ cart = [], removeFromCart }) => {
   const navigate = useNavigate()
-  const handleNavigateHome = () => navigate('/')
+  
   const total = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
@@ -15,12 +15,7 @@ const Cart = ({ cart = [], removeFromCart }) => {
         <h2 className="text-2xl font-bold mb-6 text-center">Your Cart</h2>
 
         {cart.length === 0 ? (
-          <div className="flex flex-col items-center justify-center space-y-4">
-  <p className="text-center text-gray-600">Your cart is empty.</p>
-  <button onClick={handleNavigateHome} className="text-2xl bg-purple-500 text-white px-4 py-2 rounded-lg">
-    Start Shopping
-  </button>
-</div>
+          <p className="text-center text-gray-600">Your cart is empty.</p>
         ) : (
           <>
             <ul>
