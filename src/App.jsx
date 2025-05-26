@@ -8,6 +8,7 @@ import ProductFeed from './components/ProductFeed';
 import Contact from './components/Contact';
 import About from './components/About';
 import Cart from './components/Cart';
+import ProductDetailsView from './components/ProductDetailsView';
 
 import {
   showSuccessToast,
@@ -75,7 +76,6 @@ function App() {
           path="/"
           element={
             <ProductFeed
-              addToCart={addToCart}
               showSuccessToast={showSuccessToast}
               cart={cart}
             />
@@ -90,6 +90,9 @@ function App() {
             />
           }
         />
+        <Route path="/product/:id" element={<ProductDetailsView 
+         addToCart={addToCart}
+        />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/signup" element={<SignupForm />} />
         <Route path="/about" element={<About />} />
