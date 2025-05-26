@@ -36,24 +36,24 @@ const ProductDetails = ({ addToCart }) => {
           />
         </div>
 
-        <div className=" flex-1">
-          <h1 className="text-2xl sm:text-3xl font-bold mb-2">{product.title}</h1>
-          <p className="text-sm text-gray-500 mb-1"><span className='font-bold text-black'>Category</span>: {product.category}</p>
-          <p className="text-green-600 text-xl font-semibold mb-3">${product.price}</p>
-          <p className="text-gray-700 text-sm leading-relaxed mb-6">{product.description}</p>
+        <div className="flex-1 cursor-pointer">
+  <h1 className="text-2xl sm:text-3xl font-bold mb-2">{product.title}</h1>
+  <p className="text-sm text-gray-500 mb-1">
+    <span className="font-bold text-black">Category</span>: {product.category}
+  </p>
+  <p className="text-green-600 text-xl font-semibold mb-3">${product.price}</p>
+  <p className="text-gray-700 text-sm leading-relaxed mb-6">{product.description}</p>
 
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              addToCart(product);
-            }}
-            className="w-full bg-purple-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition duration-200"
-          >
-            Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
+  <button
+    onClick={(e) => {
+      e.stopPropagation();
+      addToCart(product);
+    }}
+    className="w-full bg-purple-600 hover:bg-green-700 text-white font-semibold py-3 rounded-xl transition duration-200"
+  >
+    Add to Cart
+  </button>
+</div>
     </>
   );
 };

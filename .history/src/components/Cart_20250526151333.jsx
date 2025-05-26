@@ -15,12 +15,7 @@ const Cart = ({ cart = [], removeFromCart }) => {
         <h2 className="text-2xl font-bold mb-6 text-center">Your Cart</h2>
 
         {cart.length === 0 ? (
-          <div className="flex flex-col items-center justify-center space-y-4">
-  <p className="text-center text-gray-600">Your cart is empty.</p>
-  <button onClick={handleNavigateHome} className="text-2xl bg-purple-500 text-white px-4 py-2 rounded-lg">
-    Start Shopping
-  </button>
-</div>
+          <p className="text-center text-gray-600">Your cart is empty.</p>
         ) : (
           <>
             <ul>
@@ -55,6 +50,9 @@ const Cart = ({ cart = [], removeFromCart }) => {
 
             <div className="mt-6 text-2xl font-bold text-right">
               Total: ${total.toFixed(2)}
+            </div>
+            <div>
+              <p className="bg-purple-500">Start shopping</p>
             </div>
           </>
         )}
